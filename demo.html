@@ -2,9 +2,1363 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Ghazal Writing — A Comprehensive Guide</title>
+    <style>
+        :root {
+            --gold: #c9a84c;
+            --deep-maroon: #4a0e0e;
+            --cream: #faf5e4;
+            --ink: #2c1810;
+            --soft-red: #8b2500;
+            --border-color: #d4b896;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--cream);
+            color: var(--ink);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--deep-maroon), #1a0505);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header .urdu-title {
+            font-size: 1.8rem;
+            direction: rtl;
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        header p.subtitle {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: var(--ink);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 0.8rem;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--deep-maroon);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--gold);
+            padding-left: 1rem;
+        }
+
+        h3 {
+            color: var(--soft-red);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        h4 {
+            color: var(--ink);
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .sher-box {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            text-align: center;
+            line-height: 2.2;
+            font-size: 1.1rem;
+        }
+
+        .sher-box .poet {
+            display: block;
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--soft-red);
+            margin-top: 0.8rem;
+            font-style: normal;
+        }
+
+        .annotation {
+            background: #fff8e7;
+            border: 1px dashed var(--gold);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .annotation strong {
+            color: var(--deep-maroon);
+        }
+
+        .term {
+            background: #fff;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            font-weight: bold;
+            color: var(--deep-maroon);
+            margin: 0.1rem;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .vocab-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .vocab-card .urdu {
+            font-size: 1.2rem;
+            color: var(--deep-maroon);
+            font-weight: bold;
+        }
+
+        .vocab-card .roman {
+            color: var(--soft-red);
+            font-style: italic;
+        }
+
+        .vocab-card .meaning {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: #fff;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1rem;
+            text-align: left;
+        }
+
+        th {
+            background: var(--deep-maroon);
+            color: var(--cream);
+        }
+
+        .meter-example {
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            margin: 0.5rem 0;
+            overflow-x: auto;
+        }
+
+        .meter-example .long {
+            color: var(--deep-maroon);
+            font-weight: bold;
+        }
+
+        .meter-example .short {
+            color: #888;
+        }
+
+        ul, ol {
+            margin: 0.5rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight {
+            background: #ffeeba;
+            padding: 0.15rem 0.4rem;
+            border-radius: 2px;
+        }
+
+        .pov-table td:first-child {
+            font-weight: bold;
+            color: var(--deep-maroon);
+            width: 120px;
+        }
+
+        .full-ghazal {
+            background: #fff;
+            border: 2px solid var(--gold);
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            line-height: 2.4;
+        }
+
+        .full-ghazal h4 {
+            text-align: center;
+            color: var(--deep-maroon);
+            margin-bottom: 1rem;
+        }
+
+        .full-ghazal .couplet {
+            margin-bottom: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px dotted var(--border-color);
+        }
+
+        .full-ghazal .couplet:last-of-type {
+            border-bottom: none;
+        }
+
+        .full-ghazal .label {
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background: var(--ink);
+            color: var(--cream);
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer .closing-sher {
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.6rem; }
+            header .urdu-title { font-size: 1.3rem; }
+            nav a { display: block; margin: 0.3rem 0; }
+            .vocab-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
+
+<header>
+    <h1>The Art of Ghazal Writing</h1>
+    <div class="urdu-title">فنِ غزل گوئی</div>
+    <p class="subtitle">A comprehensive guide to understanding and writing ghazals — structure, meter, rhyme, point of view, grammar, and vocabulary</p>
+</header>
+
+<nav>
+    <a href="#what-is-ghazal">What is a Ghazal</a>
+    <a href="#anatomy">Anatomy</a>
+    <a href="#rhyme-scheme">Rhyme Scheme</a>
+    <a href="#meter">Meter (Beher)</a>
+    <a href="#pov">Point of View</a>
+    <a href="#grammar">Grammar</a>
+    <a href="#vocabulary">Vocabulary</a>
+    <a href="#rules">Rules</a>
+    <a href="#examples">Annotated Examples</a>
+    <a href="#masters">Master Poets</a>
+</nav>
+
+<main>
+
+    <!-- ============================== -->
+    <!-- SECTION 1: WHAT IS A GHAZAL    -->
+    <!-- ============================== -->
+    <section id="what-is-ghazal">
+        <h2>1. What is a Ghazal?</h2>
+
+        <p>
+            The <strong>ghazal</strong> (غزل) is one of the most celebrated poetic forms in Urdu, Persian,
+            Arabic, and Turkish literary traditions. The word "ghazal" derives from the Arabic root meaning
+            <em>"to talk to women"</em> or <em>"the cry of a wounded deer"</em> — both definitions hint at
+            its deeply emotional, often love-soaked nature.
+        </p>
+
+        <p>
+            A ghazal is a collection of <strong>autonomous couplets</strong> (called <em>ashʿār</em>, singular
+            <em>sher</em>) that are bound together by a strict rhyme scheme and meter, yet each couplet stands
+            independently in meaning. This thematic independence is what distinguishes the ghazal from a nazm
+            (a poem with a continuous narrative).
+        </p>
+
+        <p>
+            The ghazal tradition stretches back over a thousand years. It flourished in 7th-century Arabic
+            poetry, was refined in Persian by masters like <strong>Hafiz Shirazi</strong> and <strong>Rumi</strong>,
+            and reached its zenith in Urdu through poets like <strong>Mir Taqi Mir</strong>,
+            <strong>Mirza Ghalib</strong>, and <strong>Faiz Ahmed Faiz</strong>. In the 20th century, poets
+            like <strong>Agha Shahid Ali</strong> brought the form into English literature.
+        </p>
+
+        <div class="sher-box">
+            Hazāroñ ḳhwāhisheñ aisī ki har ḳhwāhish pe dam nikle<br>
+            Bahut nikle mere armān lekin phir bhī kam nikle
+            <span class="poet">— Mirza Ghalib</span>
+        </div>
+        <div class="annotation">
+            <strong>Translation:</strong> There are a thousand desires such that each desire takes my breath away /
+            Many of my wishes came true, but they still felt too few.<br>
+            This is the <em>matla</em> (opening couplet) of one of Ghalib's most famous ghazals. Notice how
+            both lines end with <span class="highlight">"kam nikle"</span> — this establishes the <em>radif</em>
+            (refrain) and <em>qafiya</em> (rhyme) for the entire ghazal.
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 2: ANATOMY OF A GHAZAL -->
+    <!-- ============================== -->
+    <section id="anatomy">
+        <h2>2. Anatomy of a Ghazal</h2>
+
+        <p>Every ghazal is built from the following structural components:</p>
+
+        <h3>2.1 Sher (شعر) — The Couplet</h3>
+        <p>
+            The <span class="term">Sher</span> is the fundamental unit of a ghazal. Each sher consists of
+            exactly <strong>two lines</strong> called <em>misra</em> (مصرع):
+        </p>
+        <ul>
+            <li><span class="term">Misra-e-Ula</span> (مصرعِ اُولیٰ) — The first line of the couplet</li>
+            <li><span class="term">Misra-e-Sani</span> (مصرعِ ثانی) — The second line of the couplet</li>
+        </ul>
+        <p>
+            Each sher must be <strong>self-contained</strong> — it must express a complete thought independently.
+            A reader should be able to understand any sher without reading the rest of the ghazal. This is the
+            hallmark of the ghazal form.
+        </p>
+
+        <h3>2.2 Matla (مطلع) — The Opening Couplet</h3>
+        <p>
+            The <span class="term">Matla</span> is the first sher of the ghazal. It is special because
+            <strong>both lines</strong> end with the <em>qafiya</em> (rhyme) and <em>radif</em> (refrain).
+            The matla establishes the rhyme pattern and meter that all subsequent couplets must follow.
+        </p>
+        <p>
+            A ghazal may have a <span class="term">Husn-e-Matla</span> (حُسنِ مطلع) — a second matla
+            immediately after the first one. This is considered a mark of the poet's skill.
+        </p>
+
+        <h3>2.3 Maqta (مقطع) — The Closing Couplet</h3>
+        <p>
+            The <span class="term">Maqta</span> is the final couplet of the ghazal. By convention,
+            the poet includes their <span class="term">takhallus</span> (تخلّص — pen name) in this couplet.
+            This serves as a signature.
+        </p>
+
+        <div class="sher-box">
+            Huī muddat ki 'Ghālib' mar gayā par yād aatā hai<br>
+            Woh har ek baat par kahnā ki yūñ hotā to kyā hotā
+            <span class="poet">— Mirza Ghalib (Maqta — note the pen name 'Ghalib' in the first line)</span>
+        </div>
+
+        <h3>2.4 Beyt / Ashʿār (ابیات / اشعار) — Interior Couplets</h3>
+        <p>
+            All couplets between the matla and maqta are simply called <em>ashʿār</em> (plural of sher).
+            Only the <strong>second line</strong> (misra-e-sani) of each interior sher must end with the
+            qafiya and radif.
+        </p>
+
+        <h3>Visual Diagram</h3>
+        <div class="full-ghazal">
+            <h4>Structure of a Complete Ghazal</h4>
+
+            <div class="couplet">
+                <span class="label">← Matla (Opening Couplet) →</span><br>
+                Line 1: .......................... <span class="highlight">qafiya + radif</span><br>
+                Line 2: .......................... <span class="highlight">qafiya + radif</span>
+            </div>
+
+            <div class="couplet">
+                <span class="label">← Sher 2 (Interior Couplet) →</span><br>
+                Line 1: .......................... (free ending)<br>
+                Line 2: .......................... <span class="highlight">qafiya + radif</span>
+            </div>
+
+            <div class="couplet">
+                <span class="label">← Sher 3 (Interior Couplet) →</span><br>
+                Line 1: .......................... (free ending)<br>
+                Line 2: .......................... <span class="highlight">qafiya + radif</span>
+            </div>
+
+            <div class="couplet">
+                <span class="label">⋮ (5 to 25 couplets typically)</span>
+            </div>
+
+            <div class="couplet">
+                <span class="label">← Maqta (Closing Couplet with Takhallus) →</span><br>
+                Line 1: ......... <span class="highlight">[poet's pen name]</span> ............<br>
+                Line 2: .......................... <span class="highlight">qafiya + radif</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 3: RHYME SCHEME        -->
+    <!-- ============================== -->
+    <section id="rhyme-scheme">
+        <h2>3. Rhyme Scheme — Qafiya and Radif</h2>
+
+        <p>The ghazal's distinctive music comes from two interlocking rhyme elements:</p>
+
+        <h3>3.1 Qafiya (قافیہ) — The Rhyme</h3>
+        <p>
+            The <span class="term">Qafiya</span> is the rhyming word or syllable that appears immediately
+            before the radif. All qafiya words in a ghazal must share the same rhyme pattern — they must
+            end with the same consonant-vowel combination.
+        </p>
+        <p><strong>Example:</strong> If the qafiya words are <em>jamāl</em>, <em>kamāl</em>, <em>ḳhayāl</em>,
+            <em>visāl</em> — they all share the <em>-āl</em> sound.</p>
+
+        <h3>3.2 Radif (ردیف) — The Refrain</h3>
+        <p>
+            The <span class="term">Radif</span> is the exact word or phrase that repeats unchanged after
+            the qafiya at the end of every relevant line. In the matla, both lines carry the radif.
+            In all subsequent shers, only the second line carries it.
+        </p>
+        <p>
+            A ghazal can be <span class="term">Ba-radif</span> (with refrain) or
+            <span class="term">Ghair-muraddaf</span> (غیر مردّف — without refrain), where only
+            the qafiya provides the end-rhyme.
+        </p>
+
+        <h3>3.3 Rhyme Scheme Formula</h3>
+        <p>The formal rhyme scheme of a ghazal is: <strong>AA BA CA DA EA ...</strong></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Couplet</th>
+                    <th>Misra-e-Ula (Line 1)</th>
+                    <th>Misra-e-Sani (Line 2)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Matla (1st)</td>
+                    <td>Ends with <strong>qafiya + radif</strong></td>
+                    <td>Ends with <strong>qafiya + radif</strong></td>
+                </tr>
+                <tr>
+                    <td>Sher 2</td>
+                    <td>Free ending</td>
+                    <td>Ends with <strong>qafiya + radif</strong></td>
+                </tr>
+                <tr>
+                    <td>Sher 3</td>
+                    <td>Free ending</td>
+                    <td>Ends with <strong>qafiya + radif</strong></td>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>Free ending</td>
+                    <td>Ends with <strong>qafiya + radif</strong></td>
+                </tr>
+                <tr>
+                    <td>Maqta (last)</td>
+                    <td>Contains <em>takhallus</em></td>
+                    <td>Ends with <strong>qafiya + radif</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3.4 Worked Example — Identifying Qafiya and Radif</h3>
+        <div class="sher-box">
+            Dil-e-nādāñ tujhe huā kyā hai<br>
+            Āḳhir is dard kī davā kyā hai
+            <span class="poet">— Mirza Ghalib</span>
+        </div>
+        <div class="annotation">
+            <strong>Radif:</strong> "kyā hai" (repeats exactly at the end of both lines)<br>
+            <strong>Qafiya:</strong> "huā" and "davā" — both end in the <em>-ā</em> sound before "kyā hai"<br>
+            <strong>Rhyme scheme:</strong> Every subsequent sher's second line will end: [word ending in -ā] + "kyā hai"
+        </div>
+
+        <p>Continuing this ghazal:</p>
+        <div class="sher-box">
+            Hamāre āge terā hāl<br>
+            Tujh ko ho kyā <strong>shikāyat</strong> hai<br><br>
+            Hum haiñ mushtāq aur woh bezār<br>
+            Yā ilāhī yeh mājarā <strong>kyā hai</strong>
+        </div>
+        <div class="annotation">
+            <strong>Note:</strong> In the interior couplet, only the second line ends with the qafiya (-ā in
+            "mājarā") + radif ("kyā hai"). The first line is free to end however the poet chooses.
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 4: METER (BEHER)       -->
+    <!-- ============================== -->
+    <section id="meter">
+        <h2>4. Meter — Beher and the Aruuz System</h2>
+
+        <p>
+            The <span class="term">Beher</span> (بحر) is the metrical pattern that governs every line of
+            a ghazal. The science of Urdu/Persian meter is called <span class="term">Aruuz</span> (عروض),
+            adapted from Arabic prosody.
+        </p>
+
+        <h3>4.1 Syllable Types</h3>
+        <p>Urdu meter is based on the alternation of <strong>long</strong> and <strong>short</strong> syllables:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Symbol</th>
+                    <th>Duration</th>
+                    <th>Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Short (harka)</td>
+                    <td>∪ (or 1)</td>
+                    <td>1 beat</td>
+                    <td>ka, na, di, su</td>
+                </tr>
+                <tr>
+                    <td>Long (sakin)</td>
+                    <td>— (or 2)</td>
+                    <td>2 beats</td>
+                    <td>kā, nā, dil, rāt</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4.2 Rukn (رکن) — Metrical Feet</h3>
+        <p>
+            Meters are built from repeating units called <span class="term">rukn</span> (plural: <em>arkān</em>).
+            Each rukn is a specific pattern of long and short syllables. The major metrical feet are:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rukn Name</th>
+                    <th>Pattern</th>
+                    <th>Mnemonic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Fa'ūlun</td><td>∪ — —</td><td>fa-ʿū-lun</td></tr>
+                <tr><td>Fā'ilun</td><td>— ∪ —</td><td>fā-ʿi-lun</td></tr>
+                <tr><td>Mafā'īlun</td><td>∪ — — —</td><td>ma-fā-ʿī-lun</td></tr>
+                <tr><td>Fā'ilātun</td><td>— ∪ — —</td><td>fā-ʿi-lā-tun</td></tr>
+                <tr><td>Mustaf'ilun</td><td>— — ∪ —</td><td>mus-taf-ʿi-lun</td></tr>
+                <tr><td>Mutafā'ilun</td><td>∪ ∪ — ∪ —</td><td>mu-ta-fā-ʿi-lun</td></tr>
+                <tr><td>Maf'ūlāt</td><td>— — — ∪</td><td>maf-ʿū-lā-tu</td></tr>
+            </tbody>
+        </table>
+
+        <h3>4.3 Common Meters (Buhūr) in Urdu Ghazals</h3>
+
+        <h4>Beher-e-Ramal (بحرِ رمل)</h4>
+        <p>Pattern: <strong>Fā'ilātun Fā'ilātun Fā'ilātun Fā'ilun</strong></p>
+        <div class="meter-example">
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span>
+        </div>
+        <p>One of the most commonly used meters. Ghalib's famous ghazal "Dil-e-nādāñ tujhe huā kyā hai" is in Beher-e-Ramal.</p>
+
+        <h4>Beher-e-Hazaj (بحرِ ہزج)</h4>
+        <p>Pattern: <strong>Mafā'īlun Mafā'īlun Mafā'īlun Mafā'īlun</strong></p>
+        <div class="meter-example">
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> <span class="long">—</span>
+        </div>
+        <p>Known for its flowing, musical quality — ideal for romantic ghazals.</p>
+
+        <h4>Beher-e-Mutaqārib (بحرِ متقارب)</h4>
+        <p>Pattern: <strong>Fa'ūlun Fa'ūlun Fa'ūlun Fa'ūlun</strong></p>
+        <div class="meter-example">
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span> |
+            <span class="short">∪</span> <span class="long">—</span> <span class="long">—</span>
+        </div>
+
+        <h4>Beher-e-Mutadārak (بحرِ متدارک)</h4>
+        <p>Pattern: <strong>Fā'ilun Fā'ilun Fā'ilun Fā'ilun</strong></p>
+        <div class="meter-example">
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span> |
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span> |
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span> |
+            <span class="long">—</span> <span class="short">∪</span> <span class="long">—</span>
+        </div>
+
+        <h3>4.4 Key Rules of Meter</h3>
+        <ul>
+            <li><strong>Every misra</strong> (line) of every sher in the ghazal must follow the same beher exactly.</li>
+            <li>Poets may use <span class="term">Zihāf</span> (زحاف) — permitted metrical variations where a long syllable is shortened or a short one is lengthened at specific positions.</li>
+            <li>The meter creates the <em>musical rhythm</em> (laye) when the ghazal is recited or sung.</li>
+            <li>To check meter, read the line aloud and clap on long syllables — the rhythm should be consistent throughout.</li>
+        </ul>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 5: POINT OF VIEW       -->
+    <!-- ============================== -->
+    <section id="pov">
+        <h2>5. Point of View in Ghazals</h2>
+
+        <p>
+            Understanding point of view (POV) is essential for ghazal writing. Because each sher is
+            thematically independent, a single ghazal can shift between different perspectives across couplets.
+        </p>
+
+        <h3>5.1 First Person (متکلّم — Mutakallim)</h3>
+        <p>
+            The <strong>most common</strong> POV in ghazals. The poet speaks as "I" (maiñ / main / ham),
+            expressing personal emotions — longing, heartbreak, ecstasy, philosophical reflection.
+            The first person creates intimacy between the poet and the reader/listener.
+        </p>
+        <div class="sher-box">
+            <strong>Main</strong> ne majnūñ pe laṛakpan meñ Asad<br>
+            Bahut sahī tere kahne lagā<br><br>
+
+            <em>Better example:</em><br>
+            Ranj se ḳhūgar huā insāñ to miṭ jātā hai ranj<br>
+            Mushkileñ <strong>mujh</strong> par paṛīñ itnī ki āsāñ ho gaʾīñ
+            <span class="poet">— Mirza Ghalib (First Person — "mujh par" = upon me)</span>
+        </div>
+        <div class="annotation">
+            <strong>First person markers in Urdu:</strong> maiñ (I), ham (we/I — majestic singular),
+            mujhe/mujh ko (to me), merā/merī/mere (my/mine), hamāra (our).
+        </div>
+
+        <h3>5.2 Second Person (مخاطب — Mukhātab)</h3>
+        <p>
+            The poet directly addresses the <strong>beloved</strong> (mehboob), God, or an abstract concept
+            using "you" (tū, tum, āp). This creates a sense of conversation or pleading.
+            In classical ghazals, the beloved is usually addressed in second person.
+        </p>
+        <div class="sher-box">
+            <strong>Tū</strong> kisi rail sī guzartī hai<br>
+            Main kisi pul sā thartharātā hūñ
+            <span class="poet">— Jaun Elia (Second Person — "Tū" = You)</span>
+        </div>
+        <div class="annotation">
+            <strong>Second person markers in Urdu:</strong> tū (informal you), tum (you), āp (formal you),
+            tujhe/tumheñ (to you), terā/terī/tere (your — informal), tumhārā (your).
+        </div>
+
+        <h3>5.3 Third Person (غائب — Ghāʾib)</h3>
+        <p>
+            Less common but powerful — the poet speaks about the beloved or a situation in the third person
+            (woh/wuh — he/she/that). This creates a sense of distance, observation, or storytelling.
+            "Woh" in Urdu ghazals is gender-neutral, adding a deliberate ambiguity.
+        </p>
+        <div class="sher-box">
+            <strong>Woh</strong> āye hamāre ghar ḳhudā kī qudrat<br>
+            Kabhī <strong>ham</strong> ko un kī, kabhī apne ghar kī yaad āʾī
+            <span class="poet">— Mirza Ghalib (Third Person for beloved — "Woh" = They/He/She)</span>
+        </div>
+        <div class="annotation">
+            <strong>Third person markers in Urdu:</strong> woh/wuh (he/she/they — gender neutral),
+            us/un (him/her/them), uskā/uskī/uske (his/her/their).
+            <br><br>
+            <strong>Key point:</strong> The gender-neutral "woh" allows ghazals to transcend earthly love —
+            the beloved can be a person, God (in Sufi tradition), or an abstract ideal.
+        </div>
+
+        <h3>5.4 POV Shifts Within a Ghazal</h3>
+        <p>
+            Since each sher is an independent unit, a ghazal frequently shifts POV between couplets.
+            This is not only acceptable but expected. A typical ghazal might:
+        </p>
+        <ul>
+            <li>Begin with first person reflection in the matla</li>
+            <li>Shift to second person (addressing the beloved) in the next sher</li>
+            <li>Move to third person observation</li>
+            <li>Return to first person in the maqta (with the poet's name)</li>
+        </ul>
+
+        <table class="pov-table">
+            <thead>
+                <tr>
+                    <th>POV</th>
+                    <th>Pronouns</th>
+                    <th>Common Usage</th>
+                    <th>Emotional Effect</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First Person</td>
+                    <td>maiñ, ham, mujhe, merā</td>
+                    <td>Personal feelings, self-reflection, pain, joy</td>
+                    <td>Intimacy, vulnerability, confession</td>
+                </tr>
+                <tr>
+                    <td>Second Person</td>
+                    <td>tū, tum, āp, tujhe, terā</td>
+                    <td>Addressing beloved, complaints, pleas, admiration</td>
+                    <td>Direct engagement, confrontation, longing</td>
+                </tr>
+                <tr>
+                    <td>Third Person</td>
+                    <td>woh, us, uskā, un</td>
+                    <td>Describing beloved from afar, philosophical observation</td>
+                    <td>Distance, mystery, universality</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 6: GRAMMAR             -->
+    <!-- ============================== -->
+    <section id="grammar">
+        <h2>6. Grammar of Ghazal Writing</h2>
+
+        <p>
+            Ghazal grammar draws from Urdu, Persian (Farsi), and Arabic. Understanding the grammatical
+            conventions is crucial for composing technically sound ghazals.
+        </p>
+
+        <h3>6.1 Izāfat (اضافت) — The Possessive Construction</h3>
+        <p>
+            The <span class="term">Izāfat</span> is a Persian grammatical construction using a short
+            <em>-e</em> (zer) sound to link two words in a possessive or descriptive relationship.
+            It is one of the most distinctive features of ghazal language.
+        </p>
+        <ul>
+            <li><strong>Dil-e-nādāñ</strong> = Heart + of + naive = The naive heart</li>
+            <li><strong>Shām-e-ġharībāñ</strong> = Evening + of + strangers = The evening of strangers</li>
+            <li><strong>Āb-e-ḥayāt</strong> = Water + of + life = The water of life</li>
+            <li><strong>Bād-e-ṣabā</strong> = Wind + of + morning = The morning breeze</li>
+        </ul>
+
+        <h3>6.2 Verb Forms and Tenses</h3>
+        <p>Ghazals use a rich range of Urdu verb forms:</p>
+        <table>
+            <thead>
+                <tr><th>Tense</th><th>Example</th><th>Usage in Ghazal</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Simple Present (Hāl-e-Muṭlaq)</td>
+                    <td>aatā hai (comes)</td>
+                    <td>Universal truths, habitual actions</td>
+                </tr>
+                <tr>
+                    <td>Present Continuous</td>
+                    <td>aa rahā hai (is coming)</td>
+                    <td>Immediate action, vivid imagery</td>
+                </tr>
+                <tr>
+                    <td>Simple Past (Māzī-e-Muṭlaq)</td>
+                    <td>aayā (came)</td>
+                    <td>Narrative, recollection</td>
+                </tr>
+                <tr>
+                    <td>Subjunctive (Ihtimāli)</td>
+                    <td>aaye (may come)</td>
+                    <td>Wishes, possibilities, prayers</td>
+                </tr>
+                <tr>
+                    <td>Imperative (Amr)</td>
+                    <td>aa (come!), aaiye (please come)</td>
+                    <td>Commands, invitations, pleas to beloved</td>
+                </tr>
+                <tr>
+                    <td>Conditional (Sharti)</td>
+                    <td>agar aaye to... (if comes, then...)</td>
+                    <td>Hypothetical scenarios, "what if" couplets</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>6.3 Poetic Licenses (Zarūrat-e-Sher)</h3>
+        <p>
+            <span class="term">Zarūrat-e-Sher</span> (ضرورتِ شعر) refers to grammatical liberties taken
+            for the sake of meter and rhyme:
+        </p>
+        <ul>
+            <li><strong>Word contraction:</strong> "karā" instead of "kiyā" (did)</li>
+            <li><strong>Vowel lengthening/shortening:</strong> adjusting syllable length for meter</li>
+            <li><strong>Archaic forms:</strong> using classical forms of words (e.g., "ḳhwāb" for "ḳhāb")</li>
+            <li><strong>Persian/Arabic plurals:</strong> "ashk" → "ashkān" (tears), "dard" → "dard-hā"</li>
+        </ul>
+        <p>
+            <strong>Important:</strong> While poetic license is accepted, excessive grammatical distortion is
+            considered a flaw (<em>ʿaib</em>). The best poets maintain natural language flow.
+        </p>
+
+        <h3>6.4 Gender in Urdu Ghazal Grammar</h3>
+        <p>
+            Urdu has grammatical gender (masculine/feminine) that affects verb conjugation, adjective
+            agreement, and postpositions. In ghazals:
+        </p>
+        <ul>
+            <li>The beloved ("mehboob") is traditionally referred to with <strong>masculine grammar</strong> even when the beloved may be female — a Persian literary convention.</li>
+            <li>"Woh" (he/she/they) is deliberately gender-ambiguous.</li>
+            <li>Modern ghazal poets sometimes break this convention to explicitly use feminine forms.</li>
+        </ul>
+
+        <h3>6.5 Sentence Structure</h3>
+        <p>Urdu follows <strong>SOV (Subject-Object-Verb)</strong> word order, but in poetry, this is flexible:</p>
+        <ul>
+            <li><strong>Normal:</strong> Main tum se mohabbat kartā hūñ (I love you)</li>
+            <li><strong>Poetic inversion:</strong> Mohabbat kartā hūñ tum se main (Love, I do, for you)</li>
+        </ul>
+        <p>Such inversions are used to place the rhyming word at the end or to create emphasis.</p>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 7: VOCABULARY          -->
+    <!-- ============================== -->
+    <section id="vocabulary">
+        <h2>7. Essential Ghazal Vocabulary</h2>
+
+        <p>
+            The ghazal tradition has a rich, codified vocabulary. Certain words carry centuries of
+            layered meaning. Understanding these terms is essential for both reading and writing ghazals.
+        </p>
+
+        <h3>7.1 Love and Longing</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="urdu">عشق</div>
+                <div class="roman">Ishq</div>
+                <div class="meaning">Passionate, all-consuming love — distinct from "mohabbat" (gentler love). In Sufi tradition, ishq refers to divine love.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">محبّت</div>
+                <div class="roman">Mohabbat</div>
+                <div class="meaning">Love — softer, more tender than ishq. Often used for earthly, romantic love.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">عاشق</div>
+                <div class="roman">Āshiq</div>
+                <div class="meaning">The lover — the one who loves, often depicted as suffering, devoted, and consumed by passion.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">محبوب</div>
+                <div class="roman">Mehboob</div>
+                <div class="meaning">The beloved — the object of the lover's devotion. Often depicted as beautiful but cruel or indifferent.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">ہجر</div>
+                <div class="roman">Hijr</div>
+                <div class="meaning">Separation from the beloved — one of the central themes of ghazal poetry.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">وصال</div>
+                <div class="roman">Visāl</div>
+                <div class="meaning">Union with the beloved — the longed-for meeting. Rare in ghazals because the ghazal thrives on separation.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">انتظار</div>
+                <div class="roman">Intezār</div>
+                <div class="meaning">Waiting, anticipation — a fundamental state of the lover in ghazal tradition.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">جنون</div>
+                <div class="roman">Junūn</div>
+                <div class="meaning">Madness, obsessive passion — the lover driven to madness by love.</div>
+            </div>
+        </div>
+
+        <h3>7.2 Imagery and Symbols</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="urdu">ساقی</div>
+                <div class="roman">Sāqī</div>
+                <div class="meaning">The cupbearer — serves wine (divine knowledge/love). In Sufi ghazals, the Saqi represents God or a spiritual guide.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">مے / شراب</div>
+                <div class="roman">Mai / Sharāb</div>
+                <div class="meaning">Wine — metaphor for divine love, ecstasy, or spiritual intoxication. Rarely literal.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">میخانہ</div>
+                <div class="roman">Maiḳhāna</div>
+                <div class="meaning">Tavern — the place of spiritual gathering, divine presence, or worldly indulgence.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">شمع</div>
+                <div class="roman">Shamʿa</div>
+                <div class="meaning">Candle — the beloved whose beauty attracts and destroys (like the moth).</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">پروانہ</div>
+                <div class="roman">Parwāna</div>
+                <div class="meaning">Moth — the lover who is drawn to the flame (beloved) and willingly burns.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">بلبل</div>
+                <div class="roman">Bulbul</div>
+                <div class="meaning">Nightingale — the singing lover, devoted to the rose (gul), symbol of poetic expression.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">گل</div>
+                <div class="roman">Gul</div>
+                <div class="meaning">Rose/flower — the beloved, beauty, transience of life.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">صحرا</div>
+                <div class="roman">Ṣaḥrā</div>
+                <div class="meaning">Desert — represents exile, wandering, the lover's desolation (reference to Majnun wandering in the desert).</div>
+            </div>
+        </div>
+
+        <h3>7.3 Emotions and States</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="urdu">درد</div>
+                <div class="roman">Dard</div>
+                <div class="meaning">Pain — but in ghazal tradition, pain is cherished as proof of love's intensity.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">غم</div>
+                <div class="roman">Gham</div>
+                <div class="meaning">Sorrow, grief — a companion of the lover; Gham-e-ishq (sorrow of love) is worn as a badge of honor.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">آنسو / اشک</div>
+                <div class="roman">Ānsū / Ashk</div>
+                <div class="meaning">Tears — a constant image; tears are described as rivers, floods, pearls, blood.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">صبر</div>
+                <div class="roman">Ṣabr</div>
+                <div class="meaning">Patience — the lover's struggle between patience and the unbearable weight of longing.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">سکون</div>
+                <div class="roman">Sukūn</div>
+                <div class="meaning">Peace, tranquility — often described as absent or fleeting in the lover's life.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">بے قراری</div>
+                <div class="roman">Beqarārī</div>
+                <div class="meaning">Restlessness — the lover's inability to find peace without the beloved.</div>
+            </div>
+        </div>
+
+        <h3>7.4 People and Archetypes</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="urdu">رقیب</div>
+                <div class="roman">Raqīb</div>
+                <div class="meaning">The rival — competitor for the beloved's attention. A stock villain in ghazal poetry.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">واعظ</div>
+                <div class="roman">Wā'iz</div>
+                <div class="meaning">The preacher — represents orthodox religion; the poet often mocks or defies the wā'iz.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">زاہد</div>
+                <div class="roman">Zāhid</div>
+                <div class="meaning">The ascetic — one who practices outward piety; contrasted with the lover's authentic suffering.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">قاصد / پیامبر</div>
+                <div class="roman">Qāṣid / Payāmbar</div>
+                <div class="meaning">Messenger — carries messages between the lover and the beloved.</div>
+            </div>
+        </div>
+
+        <h3>7.5 Nature and Setting</h3>
+        <div class="vocab-grid">
+            <div class="vocab-card">
+                <div class="urdu">بادِ صبا</div>
+                <div class="roman">Bād-e-Ṣabā</div>
+                <div class="meaning">The morning breeze — carries the fragrance of the beloved, acts as a messenger of love.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">چاند / ماہتاب</div>
+                <div class="roman">Chāñd / Māhtāb</div>
+                <div class="meaning">Moon — metaphor for the beloved's face; moonlight represents beauty.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">شام / رات</div>
+                <div class="roman">Shām / Rāt</div>
+                <div class="meaning">Evening / Night — time of longing, solitude, memories, and sleeplessness.</div>
+            </div>
+            <div class="vocab-card">
+                <div class="urdu">بہار</div>
+                <div class="roman">Bahār</div>
+                <div class="meaning">Spring — season of beauty, joy, and the beloved's presence; also transience.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 8: RULES & CONVENTIONS -->
+    <!-- ============================== -->
+    <section id="rules">
+        <h2>8. Rules and Conventions of Ghazal Writing</h2>
+
+        <h3>8.1 Mandatory Rules</h3>
+        <ol>
+            <li><strong>Minimum 5 couplets</strong> — A ghazal must have at least 5 shers (traditionally 5–15, sometimes up to 25).</li>
+            <li><strong>Consistent meter (beher)</strong> — Every misra in the ghazal must follow the same metrical pattern.</li>
+            <li><strong>Matla requirement</strong> — The first couplet must have both lines ending with qafiya + radif.</li>
+            <li><strong>Qafiya consistency</strong> — All rhyming words must share the same rhyme pattern throughout the ghazal.</li>
+            <li><strong>Thematic independence</strong> — Each sher must be a self-contained unit of meaning.</li>
+            <li><strong>Radif consistency</strong> — If the ghazal has a radif, it must repeat unchanged in every applicable line.</li>
+        </ol>
+
+        <h3>8.2 Strong Conventions (Not Mandatory but Expected)</h3>
+        <ol>
+            <li><strong>Takhallus in maqta</strong> — The poet's pen name should appear in the final couplet.</li>
+            <li><strong>Thematic diversity</strong> — While love is the primary theme, a good ghazal touches on multiple aspects — philosophy, nature, social commentary.</li>
+            <li><strong>Each sher should shine independently</strong> — A single memorable sher can make a ghazal immortal.</li>
+            <li><strong>Natural language</strong> — Avoid excessive contortion of grammar for the sake of rhyme.</li>
+        </ol>
+
+        <h3>8.3 Common Flaws (Uyūb) to Avoid</h3>
+        <ul>
+            <li><span class="term">Iʿāda</span> — Repeating the same qafiya word in two different shers (a serious flaw).</li>
+            <li><span class="term">Riyāʿat-e-laf̤z̤ī</span> — Forced or unnatural phrasing just to accommodate meter or rhyme.</li>
+            <li><span class="term">Tautology</span> — Repeating the same idea in both lines of a sher without adding depth.</li>
+            <li><span class="term">Weak maqta</span> — A maqta that feels forced or where the pen name is awkwardly inserted.</li>
+            <li><span class="term">Broken meter</span> — Inconsistent syllable counts that disrupt the beher.</li>
+        </ul>
+
+        <h3>8.4 The Art of the Sher</h3>
+        <p>The best shers achieve the following qualities:</p>
+        <ul>
+            <li><strong>Maʿnī-āfarīnī</strong> (meaning-creation) — Layered meaning that reveals itself on multiple readings.</li>
+            <li><strong>Surprise (Wardat)</strong> — The second line should add an unexpected twist to the first.</li>
+            <li><strong>Economy of language</strong> — Saying the most with the fewest words.</li>
+            <li><strong>Universal resonance</strong> — Personal emotion that speaks to everyone.</li>
+            <li><strong>Musical beauty</strong> — The sound of the words should be pleasing even to someone who doesn't understand the language.</li>
+        </ul>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 9: ANNOTATED EXAMPLES  -->
+    <!-- ============================== -->
+    <section id="examples">
+        <h2>9. Annotated Ghazal Examples</h2>
+
+        <h3>9.1 Mirza Ghalib — "Hazāroñ ḳhwāhisheñ aisī"</h3>
+        <div class="full-ghazal">
+            <h4>Complete Ghazal with Analysis</h4>
+
+            <div class="couplet">
+                <span class="label">Matla</span><br>
+                Hazāroñ ḳhwāhisheñ aisī ki har ḳhwāhish pe dam nikle<br>
+                Bahut nikle mere armān lekin phir bhī kam nikle
+            </div>
+
+            <div class="couplet">
+                <span class="label">Sher 2</span><br>
+                Dare kyūñ merā qātil kyā rahegā uskī gardan par<br>
+                Woh ḳhūñ jo chashm-e-tar se ʿumr bhar yūñ dam-ba-dam nikle
+            </div>
+
+            <div class="couplet">
+                <span class="label">Sher 3</span><br>
+                Nikalnā ḳhuld se Ādam kā sunte āʾe haiñ lekin<br>
+                Bahut be-ābru ho kar tere kūche se ham nikle
+            </div>
+
+            <div class="couplet">
+                <span class="label">Sher 4</span><br>
+                Bharam khul jāʾe zālim tere qāmat kī darāzī kā<br>
+                Agar is turra-e-pur-pech kā pechān-o-ḳham nikle
+            </div>
+
+            <div class="couplet">
+                <span class="label">Sher 5</span><br>
+                Magar likhwāʾe koʾī us ko ḳhaṭ to ham se likhwāʾe<br>
+                Ki uskī ḳhush-ḳhaṭī se harf-e-haq bhī be-num nikle
+            </div>
+
+            <div class="couplet">
+                <span class="label">Maqta</span><br>
+                Huī muddat ki <strong>'Ghālib'</strong> mar gayā par yād aatā hai<br>
+                Woh har ek baat par kahnā ki yūñ hotā to kyā hotā
+            </div>
+        </div>
+
+        <div class="annotation">
+            <strong>Technical Analysis:</strong><br>
+            <strong>Radif:</strong> "nikle" (came out / emerged)<br>
+            <strong>Qafiya:</strong> dam, kam, dam-ba-dam, ham, ḳham, num — all ending in <em>-am</em> sound<br>
+            <strong>Beher:</strong> Beher-e-Hazaj Musaddas Mahzuf (a variation of Hazaj meter)<br>
+            <strong>POV:</strong> Primarily first person ("mere armān" = my desires, "ham nikle" = we emerged)
+            with shifts to third person ("uskī gardan" = on his/her neck)<br>
+            <strong>Takhallus:</strong> "Ghalib" appears in the maqta<br><br>
+            <strong>Note on the Maqta:</strong> The final couplet brilliantly breaks from the "nikle" radif
+            pattern — this is a famous feature of this particular ghazal where Ghalib appends additional
+            couplets with a different radif, a practice some scholars debate.
+        </div>
+
+        <h3>9.2 Mir Taqi Mir — "Dīkhā to dil meñ"</h3>
+        <div class="full-ghazal">
+            <div class="couplet">
+                <span class="label">Matla</span><br>
+                Dīkhā to dil meñ jagah hī nahīñ<br>
+                Is tise-e-vahshat ko samjhā hī nahīñ
+            </div>
+
+            <div class="couplet">
+                <span class="label">Sher 2</span><br>
+                Ulṭī ho gaʾīñ sab tadbīreñ kuchh na davā ne kaam kiyā<br>
+                Dekha is bīmārī-e-dil ne āḳhir kaam-e-masīḥā hī nahīñ
+            </div>
+        </div>
+        <div class="annotation">
+            <strong>Mir's Style:</strong> Mir Taqi Mir, known as the "God of Urdu Poetry" (Ḳhudā-e-Suḳhan),
+            used simpler, more conversational Urdu compared to Ghalib. His ghazals are marked by an
+            intense sincerity of emotion and a deceptive simplicity that hides profound depth.
+        </div>
+
+        <h3>9.3 Faiz Ahmed Faiz — "Mujh se Pahlī sī Mohabbat"</h3>
+        <div class="full-ghazal">
+            <div class="couplet">
+                <span class="label">Matla</span><br>
+                Mujh se pahlī sī mohabbat merī mehboob na māñg<br>
+                Maiñ ne samjhā thā ki tū hai to darāḳhshāñ hai hayāt
+            </div>
+
+            <div class="couplet">
+                Terā gham gar na hotā, gham-e-daur​ān gar na hotā<br>
+                Chale bhī āʾo ki gulshan kā kārobār chale
+            </div>
+        </div>
+        <div class="annotation">
+            <strong>Faiz's Contribution:</strong> Faiz Ahmed Faiz revolutionized the ghazal by introducing
+            <strong>social and political themes</strong> alongside traditional love poetry. In his work,
+            the "beloved" often becomes a metaphor for revolution, freedom, or the homeland.
+            He blended <em>progressive realism</em> with classical beauty, creating a new
+            dimension in ghazal writing. His POV frequently shifts between personal love (first/second person)
+            and social commentary (third person/observational).
+        </div>
+
+        <h3>9.4 Ahmad Faraz — "Ranjish hī sahī"</h3>
+        <div class="sher-box">
+            Ranjish hī sahī, dil hī dukhāne ke liye aa<br>
+            Aa phir se mujhe chhoṛ ke jaane ke liye aa
+            <span class="poet">— Ahmad Faraz (Matla)</span>
+        </div>
+        <div class="annotation">
+            <strong>Analysis:</strong><br>
+            <strong>Radif:</strong> "ke liye aa" (come for the sake of...)<br>
+            <strong>Qafiya:</strong> "dukhāne" and "jaane" — ending in <em>-āne</em><br>
+            <strong>POV:</strong> First person speaker addressing the beloved in second person ("aa" = come,
+            imperative mood). The matla demonstrates the classic ghazal paradox — the lover invites
+            pain and heartbreak just to see the beloved once more.<br>
+            <strong>Grammar note:</strong> "Ranjish hī sahī" uses the subjunctive/concessive mood — "even if
+            it be displeasure" — a sophisticated grammatical construction.
+        </div>
+
+        <h3>9.5 Jaun Elia — Modern Ghazal</h3>
+        <div class="sher-box">
+            Bahut dino'ñ meñ mohabbat ko yeh haal hotā<br>
+            Agar tū rab hai mere, to terā sawāl hotā<br><br>
+            Tū kisi rail sī guzartī hai<br>
+            Main kisi pul sā thartharātā hūñ
+            <span class="poet">— Jaun Elia</span>
+        </div>
+        <div class="annotation">
+            <strong>Jaun Elia's Style:</strong> Known for his raw, unfiltered emotional expression.
+            Jaun broke many conventions while maintaining the technical framework. His ghazals
+            feature modern imagery (trains, bridges) alongside classical structures.
+            The second sher here uses a striking modern simile — comparing the beloved to a train
+            and the lover to a trembling bridge.
+        </div>
+
+        <h3>9.6 Parveen Shakir — A Woman's Voice</h3>
+        <div class="sher-box">
+            Maiñ ḳhayāloñ meñ tumhāre rāsteñ naaptī rahī<br>
+            Tum mere qadmoñ tale āʾe to patā hī na chalā<br><br>
+            Woh jo ham meñ tum meñ qarār thā tumheñ yād ho ki na yād ho<br>
+            Woh jo hum pe qarz-e-mohabbat thā tumheñ yād ho ki na yād ho
+            <span class="poet">— Parveen Shakir</span>
+        </div>
+        <div class="annotation">
+            <strong>Parveen Shakir's Contribution:</strong> As one of the most prominent female ghazal poets,
+            Parveen Shakir brought a distinctly feminine perspective to the ghazal tradition, which had
+            been predominantly male for centuries. She used feminine verb forms and openly expressed
+            desire from a woman's point of view — revolutionary in Urdu poetry.
+        </div>
+
+        <h3>9.7 Agha Shahid Ali — The English Ghazal</h3>
+        <div class="sher-box">
+            The only language of loss left in the world is Arabic —<br>
+            These words were said to me in a language not Arabic.<br><br>
+            Ancestors, you've left me a disinherited prince —<br>
+            how do I translate your lives lived in Arabic?
+            <span class="poet">— Agha Shahid Ali, from "Arabic"</span>
+        </div>
+        <div class="annotation">
+            <strong>The English Ghazal:</strong> Agha Shahid Ali pioneered the <strong>"real ghazal in English"</strong>,
+            insisting that English ghazals follow the traditional formal rules — qafiya, radif,
+            thematic independence of each sher, and takhallus in the maqta. He criticized the
+            loose "ghazals" written by Western poets that abandoned the form's musical structure.
+            His collection <em>"Call Me Ishmael Tonight"</em> remains the gold standard for
+            English-language ghazals.
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 10: MASTER POETS       -->
+    <!-- ============================== -->
+    <section id="masters">
+        <h2>10. Master Ghazal Poets — A Reference</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Poet</th>
+                    <th>Era</th>
+                    <th>Language</th>
+                    <th>Known For</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Hafiz Shirazi</strong></td>
+                    <td>1315–1390</td>
+                    <td>Persian</td>
+                    <td>Supreme master of Persian ghazal; Sufi mysticism blended with worldly beauty</td>
+                </tr>
+                <tr>
+                    <td><strong>Rumi (Jalāl ad-Dīn)</strong></td>
+                    <td>1207–1273</td>
+                    <td>Persian</td>
+                    <td>Spiritual ecstasy; whirling dervish tradition; universal themes of love and unity</td>
+                </tr>
+                <tr>
+                    <td><strong>Mir Taqi Mir</strong></td>
+                    <td>1723–1810</td>
+                    <td>Urdu</td>
+                    <td>"Khuda-e-Sukhan" (God of Poetry); simplicity, raw emotion, melancholy</td>
+                </tr>
+                <tr>
+                    <td><strong>Mirza Ghalib</strong></td>
+                    <td>1797–1869</td>
+                    <td>Urdu / Persian</td>
+                    <td>Intellectual depth, wordplay, philosophical complexity, wit</td>
+                </tr>
+                <tr>
+                    <td><strong>Allama Iqbal</strong></td>
+                    <td>1877–1938</td>
+                    <td>Urdu / Persian</td>
+                    <td>Khudi (self-empowerment), spirituality, political philosophy</td>
+                </tr>
+                <tr>
+                    <td><strong>Faiz Ahmed Faiz</strong></td>
+                    <td>1911–1984</td>
+                    <td>Urdu</td>
+                    <td>Progressive poetry; fusion of romantic and revolutionary themes</td>
+                </tr>
+                <tr>
+                    <td><strong>Ahmad Faraz</strong></td>
+                    <td>1931–2008</td>
+                    <td>Urdu</td>
+                    <td>Romantic intensity; accessible modern language; iconic ghazals</td>
+                </tr>
+                <tr>
+                    <td><strong>Jaun Elia</strong></td>
+                    <td>1931–2002</td>
+                    <td>Urdu</td>
+                    <td>Raw emotional expression; existential themes; modern imagery</td>
+                </tr>
+                <tr>
+                    <td><strong>Sahir Ludhianvi</strong></td>
+                    <td>1921–1980</td>
+                    <td>Urdu</td>
+                    <td>Film lyrics; progressive themes; accessible romanticism</td>
+                </tr>
+                <tr>
+                    <td><strong>Parveen Shakir</strong></td>
+                    <td>1952–1994</td>
+                    <td>Urdu</td>
+                    <td>Feminine voice; modern sensibility; romantic and feminist themes</td>
+                </tr>
+                <tr>
+                    <td><strong>Agha Shahid Ali</strong></td>
+                    <td>1949–2001</td>
+                    <td>English / Urdu</td>
+                    <td>English-language ghazal; formal adherence; themes of exile and Kashmir</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <div class="closing-sher">
+        Sheʿr meñ rakhte haiñ dil kā hāl<br>
+        Ghazal kahte haiñ use — jān-e-ġhazal
+    </div>
+    <p>A comprehensive guide to the art and craft of ghazal writing.</p>
+    <p>Study the masters. Respect the form. Write from the heart.</p>
+</footer>
 
 </body>
 </html>
